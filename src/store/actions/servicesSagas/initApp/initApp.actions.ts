@@ -1,4 +1,4 @@
 import { InitApp } from './initApp.types';
-import { Base } from 'store/constants/base';
+import { BaseConstants } from 'store/constants/base';
 
-export const initAppAction = (): InitApp => ({type: Base.INIT_APP});
+export const initApp = (): InitApp => ({type: BaseConstants.INIT_APP});

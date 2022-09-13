@@ -1,14 +1,13 @@
 import { fork, take } from '@redux-saga/core/effects';
 import { checkAuthorization } from './checkAuthorization';
-import { Base } from 'store/constants/base';
+import { BaseConstants } from 'store/constants/base';
 
-function* initApp(api: () => void) {
-  console.log('INIT APP SAGA START', api);
-  console.log('api', api);
+function* initApp() {
+  console.log('INIT APP SAGA START');
   try {
-    yield take(Base.INIT_APP);
+    yield take(BaseConstants.INIT_APP);
 
-    yield fork(checkAuthorization, api);
+    yield fork(checkAuthorization);
   } catch (e) {
     console.log('initApp error', e);
   }

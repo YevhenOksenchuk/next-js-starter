@@ -1,3 +1,3 @@
-export enum Base {
+export enum BaseConstants {
   'INIT_APP' = 'INIT_APP',
 }

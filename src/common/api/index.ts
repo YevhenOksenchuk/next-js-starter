@@ -1,7 +1,11 @@
 import auth from './auth.service';
 import user from './user.service';
 
-export default {
+const services = {
   auth,
   user
 }
+
+const decoratedServices = {};
+
+export default services

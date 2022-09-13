@@ -1,6 +1,6 @@
 import { Action } from '@redux-saga/types';
-import { Base } from '../../../constants/base';
+import { BaseConstants } from 'store/constants/base';
 
-export  interface InitApp extends Action<Base> {
-  type: typeof Base.INIT_APP
+export  interface InitApp extends Action<BaseConstants> {
+  type: typeof BaseConstants.INIT_APP
 }
